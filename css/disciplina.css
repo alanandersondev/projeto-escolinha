@@ -1,0 +1,303 @@
+/* General Body and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background for the overall page */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+header {
+    background-color: #74489d; /* Deep purple for header */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Mantém a logo e o logout nas extremidades */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.form-image img {
+    max-height: 100px; /* Adjust logo size */
+    border-radius: 10px; /* Rounded corners for the logo */
+    /* Para centralizar a imagem dentro de .form-image (se for preciso) */
+    display: block;
+    margin: 0 auto;
+}
+
+.menu {
+    /* **NOVA ADIÇÃO:** Margens automáticas para centralizar o menu */
+    margin-left: auto;
+    margin-right: auto;
+    /* Isso fará com que o menu ocupe o espaço disponível e se centralize */
+}
+
+.menu .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem; /* Increased space between menu items for better readability */
+}
+
+.menu .menu-list li a {
+    text-decoration: none;
+    color: #fbe505; /* Yellow text for menu items */
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.05rem; /* Slightly larger font for menu items */
+}
+
+.menu .menu-list li a:hover {
+    background-color: rgba(72, 1, 123, 0.621); /* Light hover effect */
+    transform: translateY(-2px);
+}
+
+.logout-container {
+    /* Já está OK com 'margin-left: auto;' */
+    margin-left: auto; /* Push logout button to the right */
+}
+
+.logout-container .sair-button {
+    background-color: #fbe505; /* Yellow for logout button */
+    color: #74489d; /* Purple text on yellow button */
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.logout-container .sair-button:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Area */
+.container {
+    flex-grow: 1; /* Allows container to take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem; /* Adjusted padding for better spacing */
+}
+
+.form-section {
+    width: 100%;
+    max-width: 700px; /* Max width for the form section */
+}
+
+/* Form Styling */
+form {
+    background-color: #74489d; /* Deep purple for the form background */
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    margin: 0 auto; /* Center the form horizontally */
+    border: 1px solid rgba(116, 72, 157, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    background-color: #fbe505; /* Yellow for the heading background */
+    color: #74489d; /* Deep purple text for heading */
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    width: 100%; /* Make heading take full width */
+}
+
+/* Form Labels and Inputs */
+.form-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Gap between input boxes */
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    flex: 1 1 calc(50% - 0.75rem); /* Two columns, adjusted for gap */
+    min-width: 280px; /* Minimum width for inputs */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input label,
+.form-option label,
+.description label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #ffffff; /* White text for labels */
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-input input[type="text"],
+.form-input input[type="number"],
+.form-option select,
+.description textarea {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input input[type="text"]:focus,
+.form-input input[type="number"]:focus,
+.form-option select:focus,
+.description textarea:focus {
+    border-color: #74489d; /* Highlight border on focus */
+    box-shadow: 0 0 0 3px rgba(116, 72, 157, 0.2); /* Light purple shadow */
+    outline: none;
+}
+
+.form-option {
+    flex: 1 1 calc(50% - 0.75rem); /* Align with other inputs */
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    width: 100%; /* Full width for description */
+    display: flex;
+    flex-direction: column;
+}
+
+.description textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+/* Error Messages */
+.error-message {
+    color: #fbe505; /* Yellow for error messages */
+    font-size: 0.88rem;
+    margin-top: 0.4rem;
+    display: block;
+    width: 100%;
+}
+
+#error-global {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Buttons */
+.botao {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.botao button {
+    flex: 1; /* Allow button to grow */
+    padding: 1.1rem;
+    background-color: #fbe505; /* Yellow for submit button */
+    color: #74489d; /* Deep purple text */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botao button:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.rodape {
+    background-color: #74489d; /* Deep purple footer */
+    color: #fbe505;
+    text-align: center;
+    padding: 1.2rem; /* Increased padding for footer */
+    margin-top: auto; /* Pushes footer to the bottom */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem; /* Slightly larger font size for footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu .menu-list {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .form-image {
+        margin-bottom: 1rem;
+    }
+
+    .form-label {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 1.5rem;
+    }
+
+    .form-input,
+    .form-option,
+    .description {
+        flex: 1 1 100%; /* Full width for stacked inputs */
+        min-width: unset;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .botao {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

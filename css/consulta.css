@@ -1,0 +1,220 @@
+/* Estilos gerais para a área de consulta */
+.container-consulta {
+    width: 60%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #74489d; /* Usando o roxo principal do seu tema */
+    border-radius: 15px; /* Bordas arredondadas como nos seus formulários */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Sombra mais intensa */
+    border: 1px solid rgba(116, 72, 157, 0.1); /* Borda sutil */
+    color: #fbe505; /* Cor do texto principal na área de consulta */
+}
+
+.container-consulta h2 {
+    background-color: #fbe505; /* Fundo amarelo para o título */
+    color: #74489d; /* Texto roxo no título */
+    text-align: center;
+    border-radius: 8px; /* Bordas arredondadas para o título */
+    padding: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para o título */
+}
+
+/* Estilos para o formulário de consulta */
+.form-consulta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Aumentado o espaçamento */
+    margin-bottom: 2.5rem; /* Mais espaço abaixo do formulário */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.form-group label {
+    font-weight: 500; /* Mesma espessura de fonte dos seus labels */
+    color: #ffffff; /* Cor branca para o label */
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.form-group select {
+    padding: 0.85rem 1.1rem; /* Padding igual aos seus inputs */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem;
+    min-width: 280px; /* Largura mínima como seus input-box */
+    color: #333; /* Cor do texto dentro do select */
+    background-color: #fff; /* Fundo branco para o select */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group select:focus {
+    border-color: #fbe505; /* Borda amarela no foco */
+    box-shadow: 0 0 0 3px rgba(251, 229, 5, 0.2); /* Sombra amarela leve */
+    outline: none;
+}
+
+.btn-consultar {
+    background-color: #fbe505; /* Amarelo para o botão */
+    color: #74489d; /* Texto roxo no botão */
+    padding: 0.75rem 1.5rem; /* Padding similar ao seu botão "Sair" */
+    border: none;
+    border-radius: 25px; /* Bordas mais arredondadas como o botão "Sair" */
+    cursor: pointer;
+    font-size: 1.05rem; /* Tamanho de fonte similar aos itens do menu */
+    font-weight: 600; /* Peso da fonte similar ao botão "Sair" */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra similar ao botão "Sair" */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-consultar:hover {
+    background-color: #e6cb00; /* Amarelo mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para a área de resultados da consulta */
+.resultado-consulta {
+    margin-top: 20px;
+    min-height: 200px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(251, 229, 5, 0.3); /* Linha divisória amarela clara */
+}
+
+.mensagem-inicial, .mensagem-vazio {
+    text-align: center;
+    color: #fbe505; /* Amarelo para mensagens informativas */
+    font-style: italic;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(251, 229, 5, 0.1); /* Fundo sutil para mensagens */
+    margin-top: 20px;
+}
+
+/* Estilos para a tabela de resultados */
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fundo branco para a tabela */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-dados th,
+.tabela-dados td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: #333; /* Cor do texto padrão na tabela */
+}
+
+.tabela-dados th {
+    background-color: #fbe505; /* Amarelo para o cabeçalho da tabela */
+    color: #74489d; /* Roxo para o texto do cabeçalho */
+    font-weight: bold;
+}
+
+.tabela-dados tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas alternadas para legibilidade */
+}
+
+.tabela-dados tr:hover {
+    background-color: #f1f1f1; /* Efeito de hover nas linhas */
+}
+
+/* Estilos para mensagens de erro */
+.mensagem-erro {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcccc; /* Vermelho claro para erro */
+    border: 1px solid #ff9999;
+    color: #cc0000; /* Vermelho escuro para o texto */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-consulta {
+        width: 95%; /* Ocupa mais largura em telas menores */
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .form-consulta {
+        flex-direction: column; /* Itens do formulário em coluna */
+        gap: 1.5rem;
+    }
+
+    .form-group select {
+        min-width: unset; /* Remove a largura mínima para melhor ajuste */
+        width: 100%;
+    }
+
+    .tabela-dados, .tabela-dados tbody, .tabela-dados thead, .tabela-dados tr, .tabela-dados th, .tabela-dados td {
+        display: block; /* Garante que a tabela se ajuste em telas menores */
+    }
+
+    .tabela-dados thead {
+        /* Esconder o cabeçalho original, mas ainda acessível para leitores de tela */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .tabela-dados tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .tabela-dados td {
+        border: none; /* Remove bordas internas das células */
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Espaço para o "cabeçalho" da célula */
+        text-align: right;
+    }
+
+    .tabela-dados td:last-child {
+        border-bottom: none;
+    }
+
+    .tabela-dados td::before {
+        /* Cria um "cabeçalho" para cada célula usando data-label */
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #74489d; /* Roxo para os labels */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-consulta {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .container-consulta h2 {
+        padding: 10px;
+        font-size: 1.3rem;
+    }
+
+    .form-group select, .btn-consultar {
+        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+    }
+}

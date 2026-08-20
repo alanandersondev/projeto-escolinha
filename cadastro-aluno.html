@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="form-image">
+            <img src="img/logo_escola.png">
+        </div>
+
+        <nav class="menu">
+            
+            <ul class="menu-list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="consulta.html">Consultar Dados</a></li>
+                <li><a href="cadastro-aluno.html">Alunos</a></li>
+                <li><a href="FormularioPais.html">Pais/Responsáveis</a></li>
+                <li><a href="disciplina.html">Disciplinas</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+                <li><a href="notas.html">Notas</a></li>
+            </ul>
+    
+        </nav>
+
+        <div class="logout-container">
+            <a href="login.html" class="sair-button" onclick="sair()">Sair</a>
+        </div>
+
+    </header>
+    <div class="container">
+        <form id="cadastroForm">
+            <h1>Cadastro Aluno</h1>
+            <div class="input-group">
+
+                <div class="input-box">
+                    <label for="nome">Primeiro nome</label>
+                    <input type="text" id="nome" name="nome"><br>
+                    <span id="nome-error" class="error-message"></span><br>
+                </div>
+                
+                <div class="input-box">
+                    <label for="ultimoNome">Ùltimo nome</label>
+                    <input type="text" id="ultimoNome" name="ultimoNome"><br>
+                    <span id="ultimoNome-error" class="error-message"></span><br>
+                </div>
+    
+                <div class="input-box">
+                    <label for="cpf">Cpf</label>
+                    <input type="text" id="cpf" name="cpf"><br>
+                    <span id="cpf-error" class="error-message"></span><br>
+                </div>
+    
+                <div class="input-box">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento"><br>
+                    <span id="dataNascimento-error" class="error-message"></span><br>
+                </div>
+    
+                <div class="radio-container">
+                    <label class="form-label">
+                        Gênero
+                    </label>
+
+                    <div id="gender-inputs">
+                        <div class="radio-box">
+                            <input type="radio" name="gender" id="female" class="form-control" value="female">
+                            <label for="female" class="form-label">Feminino</label>
+                        </div>
+
+                        <div class="radio-box">
+                            <input type="radio" name="gender" id="male" class="form-control" value="male">
+                            <label for="male" class="form-label">Masculino</label>
+                        </div>
+
+                        <div class="radio-box">
+                            <input type="radio" name="gender" id="other" class="form-control" value="other">
+                            <label for="other" class="form-label">Outro</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <span id="genero-error" class="error-message"></span><br>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <footer class="rodape">
+        <p>&copy; Copyrigth 2025 Gestão Escolar. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/alunos.js"></script>
+</body>
+</html> 

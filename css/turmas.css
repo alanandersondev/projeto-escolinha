@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Purple gradient background */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+header {
+    background-color: #74489d; /* Deep purple for header */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.form-image img {
+    max-height: 100px; /* Adjust logo size */
+    border-radius: 10px; /* Rounded corners for the logo */
+}
+
+.menu .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem; /* Increased space between menu items for better readability */
+}
+
+.menu .menu-list li a {
+    text-decoration: none;
+    color: #fbe505; /* White text for menu items */
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.05rem; /* Slightly larger font for menu items */
+}
+
+.menu .menu-list li a:hover {
+    background-color: rgba(72, 1, 123, 0.621); /* Light hover effect */
+    transform: translateY(-2px);
+}
+
+.logout-container .sair-button {
+    background-color: #fbe505; /* Yellow for logout button */
+    color: #74489d; /* Purple text on yellow button */
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.logout-container .sair-button:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Container and Form */
+.container {
+    flex-grow: 1; /* Allows container to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem; /* Adjusted padding for better spacing */
+}
+
+form {
+    background-color: #74489d; /* White background for the form */
+    padding: 3rem; /* Increased padding inside the form */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    max-width: 900px; /* Max width for larger screens */
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(116, 72, 157, 0.1); /* Subtle border for definition */
+}
+
+h1 {
+    background-color: #fbe505;
+    color: #74489d;
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 2rem; /* Add space below the heading */
+}
+
+/* Input Group and Input Box */
+.input-group {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allows inputs to wrap */
+    gap: 2rem; /* Increased gap between input boxes */
+    margin-bottom: 1.8rem; /* Slightly more space below the group */
+}
+
+.input-box {
+    flex: 1 1 calc(50% - 1rem); /* Adjusted flex-basis for more balanced columns */
+    min-width: 280px; /* Minimum width for input boxes */
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 0.6rem; /* Slightly more space below label */
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.input-box label i {
+    margin-right: 8px;
+    color: #ffffff; /* Purple icon color */
+}
+
+.input-box input[type="text"],
+.input-box input[type="date"],
+.input-box input[type="number"],
+.input-box select { /* Added select to styling */
+    width: 100%;
+    padding: 0.85rem 1.1rem; /* Increased padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box input[type="text"]:focus,
+.input-box input[type="date"]:focus,
+.input-box input[type="number"]:focus,
+.input-box select:focus { /* Added select to focus styling */
+    border-color: #74489d; /* Highlight border on focus */
+    box-shadow: 0 0 0 3px rgba(116, 72, 157, 0.2); /* Light purple shadow */
+    outline: none;
+}
+
+/* Error Messages */
+.error-message {
+    color: #fbe505; /* Red for error messages */
+    font-size: 0.88rem; /* Slightly larger font size */
+    margin-top: 0.4rem; /* More space above error message */
+    display: block;
+}
+
+/* Buttons */
+form button[type="submit"] {
+    width: 100%;
+    padding: 1.1rem; /* Increased padding for submit button */
+    background-color: #fbe505; /* Yellow submit button */
+    color: #74489d; /* Purple text on yellow */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem; /* Larger font for submit button */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem; /* More space above submit button */
+}
+
+form button[type="submit"]:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.rodape {
+    background-color: #74489d; /* Purple footer */
+    color: #fbe505;
+    text-align: center;
+    padding: 1.2rem; /* Increased padding for footer */
+    margin-top: auto; /* Pushes footer to the bottom */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem; /* Slightly larger font size for footer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu .menu-list {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .form-image {
+        margin-bottom: 1rem;
+    }
+
+    .input-box {
+        flex: 1 1 100%; /* Single column layout on small screens */
+        min-width: unset;
+    }
+
+    form {
+        padding: 1.8rem; /* Adjusted padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1.2rem; /* Further adjusted padding for very small screens */
+    }
+
+    .input-group {
+        gap: 1.2rem; /* Adjusted gap for smaller screens */
+    }
+}

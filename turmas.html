@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Turma</title>
+    <link rel="stylesheet" href="css/turmas.css">
+</head>
+<body>
+    <header>
+        <div class="form-image">
+            <img src="img/logo_escola.png">
+        </div>
+
+        <nav class="menu">
+            
+            <ul class="menu-list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="consulta.html">Consultar Dados</a></li>
+                <li><a href="cadastro-aluno.html">Alunos</a></li>
+                <li><a href="FormularioPais.html">Pais/Responsáveis</a></li>
+                <li><a href="disciplina.html">Disciplinas</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+                <li><a href="notas.html">Notas</a></li>
+            </ul>
+    
+        </nav>
+
+        <div class="logout-container">
+            <a href="login.html" class="sair-button" onclick="sair()">Sair</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="cadastroTurmaForm">
+            <h1>Cadastro de Turma</h1>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="nome">Nome da Turma</label>
+                    <input type="text" id="nome" name="nome"><br>
+                    <span id="nomeError" class="error-message"></span>
+                </div>
+    
+                <div class="input-box">
+                    <label for="serie">Série/Ano</label>
+                    <input type="text" id="serie" name="serie"><br>
+                    <span id="serieError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="turno">Turno</label>
+                    <select id="turno" name="turno">
+                        <option value="">Selecione</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Integral</option>
+                    </select><br>
+                    <span id="turnoError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="vagas">Número de Vagas</label>
+                    <input type="number" id="vagas" name="vagas"><br>
+                    <span id="vagasError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="inicio">Data de Início</label>
+                    <input type="date" id="inicio" name="inicio"><br>
+                    <span id="inicioError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="fim">Data de Término</label>
+                    <input type="date" id="fim" name="fim"><br>
+                    <span id="fimError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="horario">Horário das Aulas</label>
+                    <input type="text" id="horario" name="horario"><br>
+                    <span id="horarioError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="professor">Professor(es)</label>
+                    <input type="text" id="professor" name="professor"><br>
+                    <span id="professorError" class="error-message"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="disciplinas">Disciplinas</label>
+                    <input type="text" id="disciplinas" name="disciplinas"><br>
+                    <span id="disciplinasError" class="error-message"></span>
+                </div>
+   
+            </div>
+            <button type="submit">Cadastrar</button>
+            
+        </form>
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+    <footer class="rodape">
+        <p>&copy; Copyrigth 2025 Gestão Escolar. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/turmas.js"></script>
+</body>
+</html>

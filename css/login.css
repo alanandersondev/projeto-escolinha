@@ -1,0 +1,139 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #74489d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%; 
+    max-width: 800px; 
+    margin: 20px; 
+}
+
+.form-image {
+    display: none; 
+    background-color: #f5eeee;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.form {
+    padding: 30px;
+    text-align: center;
+}
+
+.form h1 {
+    color: #fbe505;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f5eeee;
+    font-weight: bold;
+}
+
+.form-group i {
+    margin-right: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form button[type="submit"] {
+    background-color: #fbe505;
+    color: #74489d;
+    font-family: Arial; 
+    font-size: 10pt; 
+    font-weight: bold; 
+    border-radius: 8px;
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+    padding: 8px;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #f6f5f5;
+}
+
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; 
+    }
+
+    .form-image {
+        display: flex; 
+        flex: 1; 
+    }
+
+    .form {
+        flex: 1; 
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left; 
+    }
+
+    .form h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: calc(100% - 30px);
+    }
+
+    .form button[type="submit"] {
+        width: auto; 
+        padding: 12px 30px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px; 
+    }
+
+    .form {
+        padding: 50px;
+    }
+}

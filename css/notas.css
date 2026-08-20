@@ -1,0 +1,362 @@
+/* General Body and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background for the overall page */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styling */
+header {
+    background-color: #74489d; /* Deep purple for header */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Mantém a logo e o logout nas extremidades */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.form-image img {
+    max-height: 100px; /* Adjust logo size */
+    border-radius: 10px; /* Rounded corners for the logo */
+    /* Para centralizar a imagem dentro de .form-image (se for preciso) */
+    display: block;
+    margin: 0 auto;
+}
+
+.menu {
+    /* **NOVA ADIÇÃO:** Margens automáticas para centralizar o menu */
+    margin-left: auto;
+    margin-right: auto;
+    /* Isso fará com que o menu ocupe o espaço disponível e se centralize */
+}
+
+.menu .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem; /* Increased space between menu items for better readability */
+}
+
+.menu .menu-list li a {
+    text-decoration: none;
+    color: #fbe505; /* Yellow text for menu items */
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.05rem; /* Slightly larger font for menu items */
+}
+
+.menu .menu-list li a:hover {
+    background-color: rgba(72, 1, 123, 0.621); /* Light hover effect */
+    transform: translateY(-2px);
+}
+
+.logout-container {
+    /* Já está OK com 'margin-left: auto;' */
+    margin-left: auto; /* Push logout button to the right */
+}
+
+.logout-container .sair-button {
+    background-color: #fbe505; /* Yellow for logout button */
+    color: #74489d; /* Purple text on yellow button */
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.logout-container .sair-button:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background-color: #74489d; /* Deep purple for the form background */
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto; /* Center the form with some top/bottom margin */
+    border: 1px solid rgba(116, 72, 157, 0.1);
+    display: flex; /* Use flexbox for form content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally within the form */
+}
+
+h2 {
+    background-color: #fbe505; /* Yellow for the heading background */
+    color: #74489d; /* Deep purple text for heading */
+    text-align: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 2rem;
+    font-size: 2rem; /* Larger font size for the heading */
+    width: 100%; /* Make heading take full width */
+}
+
+/* Matricula Aluno Input */
+.matricula-aluno {
+    margin-bottom: 2rem;
+    width: 100%; /* Make this section take full width */
+}
+
+.matricula-aluno label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #ffffff; /* White text for label */
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.matricula-aluno input[type="text"] {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matricula-aluno input[type="text"]:focus {
+    border-color: #74489d;
+    box-shadow: 0 0 0 3px rgba(116, 72, 157, 0.2);
+    outline: none;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #ffffff; /* White background for the table */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures rounded corners apply to content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd; /* Light gray border for cells */
+}
+
+table thead {
+    background-color: #fbe505; /* Yellow background for table header */
+    color: #74489d; /* Deep purple text for header */
+}
+
+table th {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+table tbody tr:hover {
+    background-color: #f0f0f0; /* Slightly darker gray on hover */
+}
+
+table input[type="number"] {
+    width: 80px; /* Fixed width for note inputs */
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+table input[type="number"]:focus {
+    border-color: #74489d;
+    box-shadow: 0 0 0 2px rgba(116, 72, 157, 0.2);
+    outline: none;
+}
+
+#media-matematica,
+#media-portugues,
+#media-ciencias,
+#media-educacao_fisica,
+#media-historia_geografia {
+    font-weight: bold;
+    color: #74489d; /* Deep purple for media text */
+}
+
+/* Error Messages */
+.error-message {
+    color: #fbe505; /* Yellow for error messages */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+    text-align: left; /* Align error messages to the left */
+    width: 100%; /* Ensure error message takes full width */
+}
+
+#error-geral {
+    text-align: center; /* Center general error message */
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Result Paragraph */
+#resultado {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #fbe505; /* Yellow text for result */
+    font-size: 1.1rem;
+    width: 100%; /* Make result paragraph take full width */
+}
+
+/* Buttons Container */
+.botoes-container {
+    display: flex;
+    justify-content: space-between; /* Space out the buttons */
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem; /* Space between buttons */
+    width: 100%; /* Make buttons container take full width */
+}
+
+.botoes-container button[type="submit"] {
+    flex: 1; /* Allow button to grow */
+    padding: 1.1rem;
+    background-color: #fbe505; /* Yellow for save button */
+    color: #74489d; /* Deep purple text */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botoes-container button[type="submit"]:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.voltar-button {
+    flex: 1; /* Allow button to grow */
+    display: block;
+    padding: 1.1rem;
+    background-color: #5d3a7e; /* Darker purple for voltar button */
+    color: #fbe505; /* Yellow text */
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.voltar-button:hover {
+    background-color: #4b2d66; /* Even darker purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+.rodape {
+    background-color: #74489d; /* Deep purple footer */
+    color: #fbe505;
+    text-align: center;
+    padding: 1.2rem; /* Increased padding for footer */
+    margin-top: auto; /* Pushes footer to the bottom */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem; /* Slightly larger font size for footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu .menu-list {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .form-image {
+        margin-bottom: 1rem;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    table input[type="number"] {
+        width: 60px;
+        padding: 0.5rem;
+    }
+
+    .botoes-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 1.5rem;
+    }
+
+    .botoes-container button[type="submit"],
+    .voltar-button {
+        width: 100%; /* Full width for stacked buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    table input[type="number"] {
+        width: 50px;
+        padding: 0.4rem;
+    }
+}

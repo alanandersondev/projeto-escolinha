@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5; /* cinza claro de fundo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #74489d; /* Deep purple for header */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.form-image img {
+    max-height: 100px; /* Adjust logo size */
+    border-radius: 10px; /* Rounded corners for the logo */
+}
+
+.menu .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem; /* Increased space between menu items for better readability */
+}
+
+.menu .menu-list li a {
+    text-decoration: none;
+    color: #fbe505; /* White text for menu items */
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.05rem; /* Slightly larger font for menu items */
+}
+
+.menu .menu-list li a:hover {
+    background-color: rgba(72, 1, 123, 0.621); /* Light hover effect */
+    transform: translateY(-2px);
+}
+
+.logout-container .sair-button {
+    background-color: #fbe505; /* Yellow for logout button */
+    color: #74489d; /* Purple text on yellow button */
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.logout-container .sair-button:hover {
+    background-color: #e6cb00; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-wrapper {
+    background-color: #74489d; /* roxo do formulário */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.form-header {
+    background-color: #fbe505; /* amarelo do cabeçalho */
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #74489d; /* roxo no texto do cabeçalho */
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #ffffff; /* texto branco das labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.gender-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    color: #ffffff; /* texto branco da seção de gênero */
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.gender-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fbe505; /* amarelo do botão */
+    color: #000000; /* texto preto do botão */
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #d3be0e; /* amarelo mais escuro no hover */
+}
+
+/* Footer */
+.rodape {
+    background-color: #74489d; /* Purple footer */
+    color: #fbe505;
+    text-align: center;
+    padding: 1.2rem; /* Increased padding for footer */
+    margin-top: auto; /* Pushes footer to the bottom */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem; /* Slightly larger font size for footer */
+}
+/* Responsividade leve — só espaçamentos e ajustes */
+@media (min-width: 600px) {
+    .form-wrapper {
+        max-width: 500px;
+        padding: 25px;
+    }
+
+    .form-header {
+        font-size: 20px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="date"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}

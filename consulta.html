@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas - Gestão Escolar</title>
+    <link rel="stylesheet" href="css/menu.css"> <link rel="stylesheet" href="css/consulta.css"> </head>
+<body>
+    <header>
+        <div class="form-image">
+            <img src="img/logo_escola.png" alt="Logo Escola">
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="consulta.html">Consultas</a></li>
+                <li><a href="cadastro-aluno.html">Alunos</a></li>
+                <li><a href="FormularioPais.html">Pais/Responsáveis</a></li>
+                <li><a href="disciplina.html">Disciplinas</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+                <li><a href="notas.html">Notas</a></li>
+            </ul>
+        </nav>
+
+        <div class="logout-container">
+            <a href="login.html" class="sair-button" onclick="sair()">Sair</a>
+        </div>
+    </header>
+
+    <main class="container-consulta">
+        <h2>Consultar Dados Cadastrados</h2>
+
+        <form id="formConsulta" class="form-consulta">
+            <div class="form-group">
+                <label for="tipoConsulta">Selecione o tipo de dado:</label>
+                <select id="tipoConsulta" name="tipoConsulta">
+                    <option value="">-- Selecione --</option>
+                    <option value="alunos">Alunos</option>
+                    <option value="pais">Pais/Responsáveis</option>
+                    <option value="disciplinas">Disciplinas</option>
+                    <option value="turmas">Turmas</option>
+                    <option value="notas">Notas</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-consultar">Consultar</button>
+        </form>
+
+        <div id="resultadoConsulta" class="resultado-consulta">
+            <p class="mensagem-inicial">Selecione um tipo de dado para consultar.</p>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; Copyright 2025 Gestão Escolar. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="js/menu.js"></script>
+    <script src="js/consulta.js"></script> </body>
+</html>

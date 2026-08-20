@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/notas.css">
+<title>Cadastrar Notas</title>
+</head>
+<body>
+    <header>
+        <div class="form-image">
+            <img src="img/logo_escola.png">
+        </div>
+
+        <nav class="menu">
+            
+            <ul class="menu-list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="consulta.html">Consultas</a></li>
+                <li><a href="cadastro-aluno.html">Alunos</a></li>
+                <li><a href="FormularioPais.html">Pais/Responsáveis</a></li>
+                <li><a href="disciplina.html">Disciplinas</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+                <li><a href="notas.html">Notas</a></li>
+            </ul>
+    
+        </nav>
+
+        <div class="logout-container">
+            <a href="login.html" class="sair-button" onclick="sair()">Sair</a>
+        </div>
+    </header>
+
+<form id="cadastroNotas" action="cadastro_notas.php" method="post">
+    <h2>Cadastro Notas</h2>
+    <div class="matricula-aluno">
+        <label for="matricula-aluno">Matricula do Aluno</label>
+        <input type="text" name="matricula-aluno" id="matricula-aluno" placeholder="Matricula">
+        <span id="error-matricula" class="error-message"></span>
+    </div>
+
+    <table width="100%" border="1px">
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Primeira Nota</th>
+                <th>Segunda Nota</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matemática</td>
+                <td><input type="number" placeholder="nota" name="matematica_nota1" id="matematica_nota1" min="0" max="10"></td>
+                <td><input type="number" placeholder="nota" name="matematica_nota2" id="matematica_nota2" min="0" max="10"></td>
+                <td id="media-matematica">-</td>
+            </tr>
+            <tr>
+                <td>Português</td>
+                <td><input type="number" placeholder="nota" name="portugues_nota1" id="portugues_nota1" min="0" max="10"></td>
+                <td><input type="number" placeholder="nota" name="portugues_nota2" id="portugues_nota2" min="0" max="10"></td>
+                <td id="media-portugues">-</td>
+            </tr>
+            <tr>
+                <td>Ciências</td>
+                <td><input type="number" placeholder="nota" name="ciencias_nota1" id="ciencias_nota1" min="0" max="10"></td>
+                <td><input type="number" placeholder="nota" name="ciencias_nota2" id="ciencias_nota2" min="0" max="10"></td>
+                <td id="media-ciencias">-</td>
+            </tr>
+            <tr>
+                <td>Ed. Física</td>
+                <td><input type="number" placeholder="nota" name="educacao_fisica_nota1" id="educacao_fisica_nota1" min="0" max="10"></td>
+                <td><input type="number" placeholder="nota" name="educacao_fisica_nota2" id="educacao_fisica_nota2" min="0" max="10"></td>
+                <td id="media-educacao_fisica">-</td>
+            </tr>
+            <tr>
+                <td>História e Geografia</td>
+                <td><input type="number" placeholder="nota" name="historia_geografia_nota1" id="historia_geografia_nota1" min="0" max="10"></td>
+                <td><input type="number" placeholder="nota" name="historia_geografia_nota2" id="historia_geografia_nota2" min="0" max="10"></td>
+                <td id="media-historia_geografia">-</td>
+            </tr>
+        </tbody>
+    </table>
+    <span id="error-geral" class="error-message"></span>
+    <br>
+    <p id="resultado"></p> <div class="botoes-container">
+        <button type="submit">Salvar</button>
+    </div>
+</form>
+    <footer class="rodape">
+        <p>&copy; Copyrigth 2025 Gestão Escolar. Todos os direitos reservados.</p>
+    </footer>
+<script src="js/notas.js"></script>
+
+</body>
+</html>

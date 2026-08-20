@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/disciplina.css">
+	<title>Cadastro | Disciplina</title>
+</head>
+<body>
+  <header>
+        <div class="form-image">
+            <img src="img/logo_escola.png">
+        </div>
+
+        <nav class="menu">
+            
+            <ul class="menu-list">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="consulta.html">Consultar Dados</a></li>
+                <li><a href="cadastro-aluno.html">Alunos</a></li>
+                <li><a href="FormularioPais.html">Pais/Responsáveis</a></li>
+                <li><a href="disciplina.html">Disciplinas</a></li>
+                <li><a href="turmas.html">Turmas</a></li>
+                <li><a href="notas.html">Notas</a></li>
+            </ul>
+    
+        </nav>
+
+        <div class="logout-container">
+            <a href="login.html" class="sair-button" onclick="sair()">Sair</a>
+        </div>
+
+    </header>
+
+    <div class="container">
+
+      <div class="form-section">
+
+          <form id="cadastro_disciplina" action="cadastro_disciplina.php" method="post">
+
+              <h2>Cadastro Disciplina</h2>
+
+              <div class=" form-label">
+
+                  <div class="form-input">
+                    <label for="name_Disciplina">Nome da Disciplina</label>
+                    <input type="text" name="name_Disciplina" id="name_Disciplina" placeholder="Disciplina"  />
+                    <span id="error-name_disciplina" class="error-message"></span>
+                  </div>
+
+                  <div class="form-input">
+                    <label for="name_Professor">Nome do Professor</label>         
+                    <input type="text" name="name_Professor" id="name_Professor" placeholder="Professor"  />
+                    <span id="error-name_professor" class="error-message"></span>
+                  </div>
+                  
+                  <div class="form-input">
+                      <label for="carga_horaria">Carga Horária</label>
+                      <input type="number" name="carga_horaria" id="carga_horaria" min="40" max="320" placeholder="Horas"  />
+                      <span id="error-carga_horaria" class="error-message"></span>
+                  </div>
+
+                  <div class="form-option">
+
+                      <label for="name_option">Turno</label>
+                        <select id="name_option" name="name_option">
+                            <option 
+                              value="">Selecione:</option>
+                              <option value="matutino">Matutino</option>
+                              <option value="vespertino">Vespertino</option>
+                              <option value="noturno">Noturno</option>
+                        </select>
+                              <span id="error-name_option" class="error-message"></span>
+                  </div>
+
+
+                  <div class="description">
+                    <label>Descrição:</label>
+                      <textarea id="description_text" name="description_text" rows="8" cols="42" placeholder="Descrição sobre a Disciplina"></textarea>
+
+                  </div>
+              
+              </div> 
+              
+              <div class="botao">
+               <button type="submit">Cadastrar</button>
+               </div>
+
+              <span id="error-global" class="error-message"></span>
+
+
+          </form>
+
+      </div>
+
+    </div>
+    <footer class="rodape">
+        <p>&copy; Copyrigth 2025 Gestão Escolar. Todos os direitos reservados.</p>
+    </footer>
+<script src="js/disciplina.js"></script>
+</body>
+</html>
